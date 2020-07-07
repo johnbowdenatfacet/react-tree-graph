@@ -41,9 +41,9 @@ export default class Container extends React.PureComponent {
 							y2={link.target.y}
 							pathProps={{ ...this.props.pathProps, ...link.target.data.pathProps }}/>)
 					}
-					{ this.props.nodes.map(node =>
+					{ this.props.nodes.map((node, index) =>
 						<Node
-							key={node.data[this.props.keyProp]}
+							key={index}
 							keyProp={this.props.keyProp}
 							labelProp={this.props.labelProp}
 							shape={this.props.nodeShape}
