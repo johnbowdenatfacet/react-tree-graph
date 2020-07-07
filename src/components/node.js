@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import wrapHandlers from '../wrapHandlers';
+import { has } from 'core-js/fn/reflect';
 
 const propTypes = {
 	x: PropTypes.number.isRequired,
@@ -10,7 +11,8 @@ const propTypes = {
 	shape: PropTypes.string.isRequired,
 	nodeProps: PropTypes.object.isRequired,
 	gProps: PropTypes.object.isRequired,
-	textProps: PropTypes.object.isRequired
+	textProps: PropTypes.object.isRequired,
+	title: PropTypes.string
 };
 
 export default class Node extends React.PureComponent {
@@ -54,6 +56,7 @@ export default class Node extends React.PureComponent {
 				<this.props.shape {...wrappedNodeProps}/>
 				<text dx={offset + 0.5} dy={5} {...wrappedTextProps}>
 					{this.props[this.props.labelProp]}
+					{this.props.title && <title>{this.props.title}</title>}
 				</text>
 			</g>);
 	}

@@ -18,7 +18,8 @@ const propTypes = {
 	gProps: PropTypes.object.isRequired,
 	pathProps: PropTypes.object.isRequired,
 	svgProps: PropTypes.object.isRequired,
-	textProps: PropTypes.object.isRequired
+	textProps: PropTypes.object.isRequired,
+	title: PropTypes.string
 };
 
 export default class Container extends React.PureComponent {
@@ -51,6 +52,7 @@ export default class Container extends React.PureComponent {
 							nodeProps={{ ...this.props.nodeProps, ...node.data.nodeProps }}
 							gProps={{ ...this.props.gProps, ...node.data.gProps }}
 							textProps={{ ...this.props.textProps, ...node.data.textProps }}
+							title={this.props.title}
 							{...node.data}/>)
 					}
 				</g>

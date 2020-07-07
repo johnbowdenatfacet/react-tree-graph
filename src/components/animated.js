@@ -10,7 +10,8 @@ const propTypes = {
 	nodes: PropTypes.array.isRequired,
 	duration: PropTypes.number.isRequired,
 	easing: PropTypes.func.isRequired,
-	steps: PropTypes.number.isRequired
+	steps: PropTypes.number.isRequired,
+	title: PropTypes.string
 };
 
 export default class Animated extends React.PureComponent {

@@ -29,7 +29,8 @@ const propTypes = {
 	gProps: PropTypes.object.isRequired,
 	pathProps: PropTypes.object.isRequired,
 	svgProps: PropTypes.object.isRequired,
-	textProps: PropTypes.object.isRequired
+	textProps: PropTypes.object.isRequired,
+	title: PropTypes.string
 };
 
 const defaultProps = {
@@ -89,7 +90,9 @@ export default class Tree extends React.PureComponent {
 				gProps={{ className: 'node', ...this.props.gProps }}
 				pathProps={{ className: 'link', ...this.props.pathProps }}
 				svgProps={this.props.svgProps}
-				textProps={this.props.textProps}>
+				textProps={this.props.textProps}
+				title={this.props.title}
+			>
 				{ this.props.children }
 			</Animated>);
 	}
