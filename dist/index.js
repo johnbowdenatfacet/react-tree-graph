@@ -530,9 +530,9 @@
 						/*#__PURE__*/ React.createElement(
 							'g',
 							null,
-							this.props.links.map(function(link) {
+							this.props.links.map(function(link, index) {
 								return /*#__PURE__*/ React.createElement(Link, {
-									key: link.target.data[_this.props.keyProp],
+									key: index,
 									keyProp: _this.props.keyProp,
 									pathFunc: _this.props.pathFunc,
 									source: link.source,

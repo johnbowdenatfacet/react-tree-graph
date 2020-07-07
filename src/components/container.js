@@ -28,9 +28,9 @@ export default class Container extends React.PureComponent {
 			<svg {...this.props.svgProps} height={this.props.height} width={this.props.width}>
 				{ this.props.children }
 				<g>
-					{ this.props.links.map(link =>
+					{ this.props.links.map((link, index) =>
 						<Link
-							key={link.target.data[this.props.keyProp]}
+							key={index}
 							keyProp={this.props.keyProp}
 							pathFunc={this.props.pathFunc}
 							source={link.source}
