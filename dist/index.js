@@ -547,12 +547,12 @@
 									)
 								});
 							}),
-							this.props.nodes.map(function(node) {
+							this.props.nodes.map(function(node, index) {
 								return /*#__PURE__*/ React.createElement(
 									Node,
 									_extends(
 										{
-											key: node.data[_this.props.keyProp],
+											key: index,
 											keyProp: _this.props.keyProp,
 											labelProp: _this.props.labelProp,
 											shape: _this.props.nodeShape,
